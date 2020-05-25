@@ -6736,6 +6736,11 @@ uuid@^3.3.2:
   resolved "https://pkgs.dev.azure.com/spnsdigital/_packaging/sapiens-registry/npm/registry/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha1-sj5DWK+oogL+ehAK8fX4g/AgB+4=
 
+uuid@^8.1.0:
+  version "8.1.0"
+  resolved "https://pkgs.dev.azure.com/spnsdigital/_packaging/sapiens-registry/npm/registry/uuid/-/uuid-8.1.0.tgz#6f1536eb43249f473abc6bd58ff983da1ca30d8d"
+  integrity sha1-bxU260Mkn0c6vGvVj/mD2hyjDY0=
+
 v8-compile-cache@^2.0.3:
   version "2.1.0"
   resolved "https://pkgs.dev.azure.com/spnsdigital/_packaging/sapiens-registry/npm/registry/v8-compile-cache/-/v8-compile-cache-2.1.0.tgz#e14de37b31a6d194f5690d67efc4e7f6fc6ab30e"
