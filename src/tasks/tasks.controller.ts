@@ -25,12 +25,12 @@ export class TasksController {
   }
 
 
-  // @Post()
-  // @UsePipes(ValidationPipe)
-  // createTask(@Body() createTaskDto: CreateTaskDto): Task {
-  //   const task = this.tasksService.createTask(createTaskDto);
-  //   return task;
-  // }
+  @Post()
+  @UsePipes(ValidationPipe)
+  createTask(@Body() createTaskDto: CreateTaskDto): Promise<Task> {
+    const task = this.tasksService.createTask(createTaskDto);
+    return task;
+  }
 
   // @Delete('/:id')
   // deleteTaskById(@Param('id') id: string): void {
