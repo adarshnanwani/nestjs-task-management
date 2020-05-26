@@ -5,6 +5,7 @@ import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
 import { TaskStatusValidationPipe } from './pipes/task-validation-status.pipe';
 import { Task } from './task.entity';
 import { DeleteResult } from 'typeorm';
+import { TaskStatus } from './task-status.enum';
 
 @Controller('tasks')
 export class TasksController {
@@ -38,10 +39,12 @@ export class TasksController {
     return this.tasksService.deleteTaskById(id);
   }
 
-  // @Patch('/:id/status')
-  // updateTaskStatus(@Body('status', TaskStatusValidationPipe) status: TaskStatus, @Param('id') id: string): Task {
-  //   return this.tasksService.updateTaskStatus(id, status);
-  // }
+  @Patch('/:id/status')
+  updateTaskStatus(
+    @Body('status', TaskStatusValidationPipe) status: TaskStatus,
+    @Param('id', ParseIntPipe) id: number): Promise<Task> {
+    return this.tasksService.updateTaskStatus(id, status);
+  }
 
 }
 
