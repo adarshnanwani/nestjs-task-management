@@ -5,6 +5,7 @@ import { TaskRepository } from './task.repository';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Task } from './task.entity';
 import { TaskStatus } from './task-status.enum';
+import { DeleteResult } from 'typeorm';
 
 @Injectable()
 export class TasksService {
@@ -26,6 +27,10 @@ export class TasksService {
 
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
     return this.taskRepository.createTask(createTaskDto);
+  }
+
+  async deleteTaskById(id: number): Promise<DeleteResult> {
+    return this.taskRepository.delete(id);
   }
 
 }
